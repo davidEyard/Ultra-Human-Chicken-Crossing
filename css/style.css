@@ -1,0 +1,98 @@
+body {
+    text-align: center;
+}
+h1 {
+    flex: center;
+    font-family: cursive;
+    color: purple;
+    justify-content: center; 
+    margin-bottom: -5px;   
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: -35px;
+}
+
+.score-panel .hearts {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .hearts li {
+    list-style: none;
+    display: inline-block;
+    color: red;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    color: grey;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.62);
+    transition: opacity 500ms;
+  /* Hides modal */
+    visibility: hidden;
+  /* Solves a bug that causes stars to stay on screen after closing modal */
+    opacity: 0;
+    z-index: 100;
+}
+
+.modal-content {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+  text-align: center;
+    border-radius: 5px;
+    width: 85%;
+    position: relative;
+  /* Without this, hearts from modal linger on the screen slightly longer than the rest of modal */
+    transition: all 2s ease-in-out;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+/* Affects "x" button on modal */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+  /* Removes default (link) underline */
+    text-decoration: none;
+    color: #333;
+}
+
+/* Changes color when hovering over "x" button on modal */
+.close:hover {
+    color: #1db9f2;
+}
+
+.modal-content .congrats-message,
+.info-message {
+    max-height: 30%;
+    overflow: auto;
+    text-align: center;
+}
+
+.congrats-message {
+  margin-top: 0.9em;
+}
